@@ -4192,7 +4192,7 @@ ${$e}`;if(X.current.gateKey!==Ie&&(X.current={gateKey:Ie,credentialRef:null,inFl
           description=${s("automations.detail.emptyDescription")}
         />
       <//>
-    `;let o=e.current_run,u=e.state==="paused",c=e.state!=="paused"&&e.state!=="completed",f=`${s(u?"missions.action.resume":"missions.action.pause")}: ${e.display_name}`,m=()=>{if(u){n?.(e.automation_id);return}c&&a?.(e.automation_id)},p=`${s("common.delete")}: ${e.display_name}`,b=()=>{window.confirm(p)&&r?.(e.automation_id)};return l`
+    `;let o=e.current_run,u=e.state==="paused",c=e.state==="active"||e.state==="scheduled",f=`${s(u?"missions.action.resume":"missions.action.pause")}: ${e.display_name}`,m=()=>{if(u){n?.(e.automation_id);return}c&&a?.(e.automation_id)},p=`${s("common.delete")}: ${e.display_name}`,b=()=>{window.confirm(p)&&r?.(e.automation_id)};return l`
     <${j} className="overflow-hidden">
       <div className="border-b border-[var(--v2-panel-border)] p-4 sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
